@@ -5,14 +5,14 @@ import (
 	"time"
 )
 
-func say(s string) {
+func say(num int) {
 	for i := 0; i < 5; i++ {
 		time.Sleep(100 * time.Millisecond)
-		fmt.Println(s)
+		fmt.Println(num)
 	}
 }
 
 func main() {
-//	go say("world")
-	say("hello")
+	go say(1)
+	say(2)
 }
